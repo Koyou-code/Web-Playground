@@ -1,0 +1,328 @@
+body {
+    /* 1. 英文/数字字体 (最优先，使用 'Anonymous Pro') */
+    font-family: 'Anonymous Pro',
+
+        /* 2. 新的日文字体 (首选 'Klee One') */
+        'Klee One',
+
+        /* 3. 后备日文和通用字体，以防 'Klee One' 无法加载或缺失字符 */
+        "游ゴシック体", "Yu Gothic", "Hiragino Kaku Gothic ProN",
+        "メイリオ", Meiryo,
+        monospace, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 1em;
+    background-color: #ffffff;
+
+
+}
+
+.background-container {
+    width: 1080px;
+    min-height: 90vh;
+    background-image: url('img/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 1080px;
+    height: 550px;
+    background-color: #fffbf5;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.left-section {
+    position: relative;
+    width: 360px;
+    height: 500px;
+    /* background-color:antiquewhite; */
+}
+
+.camera {
+    background-image: url('img/camera.png');
+    width: 360px;
+    height: 180px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 380px;
+    left: 50px;
+    z-index: 2;
+}
+.star{
+    top: 20px;
+    left: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-image: url('img/star.png');
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+.pen {
+    background-image: url('img/pen.png');
+    width: 50px;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 60px;
+    left: 40px;
+}
+
+.receipt {
+    background-image: url('img/text.png');
+    width: 200px;
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    z-index: 1;
+}
+
+.right-section {
+    position: relative;
+    left: -500px;
+    width: 700px;
+    height: 500px;
+}
+
+.dairy {
+    position: absolute;
+    left: 450px;
+    width: 700px;
+    height: 600px;
+    background-image: url(img/book.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.heart{
+    top: 80px;
+    left: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-image: url('img/Elements\ \(115\).png');
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+
+.telephon {
+    position: absolute;
+    top: 350px;
+    left: 550px;
+    width: 200px;
+    height: 300px;
+    background-image: url(img/telephone.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+.photo-1,
+.photo-2 {
+    background-image: url(img/photo.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 90px;
+    left: 80px;
+    position: absolute;
+    width: 115px;
+    height: 82px;
+    background-color: #ffffff;
+    border-style: solid;
+    border-color: white;
+    transform: rotate(5deg);
+    /* 2. 定义四个边的宽度 (上 右 下 左) */
+    border-width: 8px 8px 40px 8px;
+    border-radius: 0.1em;
+}
+
+.photo-2 {
+    background-image: url(img/photp-2.jpeg);
+    top: 250px;
+    left: 120px;
+    height: 75px;
+    transform: rotate(-5deg);
+}
+
+.right-calender {
+    position: relative;
+    width: 300px;
+    height: 500px;
+}
+
+.December {
+    left: 200px;
+    position: absolute;
+}
+
+.list-1,
+.list-2,
+.list-3 {
+    font-size: 12px;
+    top: 98px;
+    left: 165px;
+    position: absolute;
+    z-index: 3;
+}
+
+.list-2 {
+    top: 128px;
+}
+
+.list-3 {
+     top: 158px;
+}
+
+.day1,
+.day4,
+.day21 {
+    top: 75px;
+    left: 230px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    /* background-color: aqua; */
+    z-index: 3;
+    background-image: url('img/46.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.day4 {
+    left: 362px;
+}
+
+.day21 {
+    top: 207px;
+    left: 185px;
+
+}
+
+
+.text-title {
+    top: -10px;
+    left: 200px;
+    position: absolute;
+}
+
+.calender-12 {
+    left: 185px;
+    top: 50px;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    width: 100%;
+}
+
+
+.day-label {
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0;
+    font-size: 0.8em;
+    background-color: #e0e0e0;
+    /* 星期背景色 */
+}
+
+/* 日期方块的样式 */
+.date-cell {
+    min-height: 40px;
+    aspect-ratio: 1 / 1;
+
+    padding-top: 100%;
+    position: relative;
+
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 0.9em;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.date-cell::before {
+    content: attr(data-date);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.date-cell.empty {
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
+}
+
+.date-cell.today {
+    background-color: #ffcccc;
+    font-weight: bold;
+}
+
+.list-1:hover {
+    color:rgb(42, 42, 165);
+    transform: rotate(2deg) scale(1.03);
+
+    transition: all 0.3s ease;
+}
+
+.list-2:hover {
+    color:rgb(255, 242, 0);
+    transform: rotate(2deg) scale(1.04);
+
+    transition: all 0.3s ease;
+}
+
+.list-3:hover {
+    color:brown;transition: all 0.3s ease;
+    transform: rotate(2deg) scale(1.04);
+
+    transition: all 0.3s ease;
+}
+.day4:hover{
+    background-image: url(img/gassyou_youchien_girl.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.day1:hover{
+    background-image: url(img/sports_sensyu_sensei_girl.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.day21:hover{
+    background-image: url(img/ofuro_sauna_tonttu_character.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
