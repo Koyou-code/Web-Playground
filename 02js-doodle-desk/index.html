@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="section">
+            <div class="card">
+                <div class="text">
+                    <p>Click button to
+                        instantly<br> change the card's color</p>
+                </div>
+                <div class="button-section">
+                    <button data-color="red"></button>
+                    <button data-color="blue"></button>
+                    <button data-color="green"></button>
+                </div>
+
+            </div>
+            <div class="card2" id="paperContainer">
+                <div class="text">
+                    <p>Click to move this note
+                        </p>
+                </div>
+                <div class="paper">
+                    <img src="img/Paper (32).png" id="myImg" class="draggable-img" draggable="false">
+                </div>
+            </div>
+        </div>
+
+        <div class="section-2">
+            <div class="card3" id="canvasContainer">
+                <div class="text">
+                    <p>You can draw here</p>
+                </div>
+                <div class="card3-down">
+                    <button class="clear-button"><p>clear</p></button>
+                    <canvas id="myCanvas"  width="400" height="240"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="js.js"></script>
+    <script src="js2.js"></script>
+</body>
+
+</html>
