@@ -1,0 +1,94 @@
+body {
+    font-family: 'Anonymous Pro', monospace;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.section{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    border-radius: 10px;
+    margin: 10px;
+    height: 100%;
+    width: 15em;
+    height: 20em;
+    background:
+        radial-gradient(circle at 30% 20%, rgba(255, 199, 143, 0.9), transparent 60%),
+        radial-gradient(circle at 70% 60%, rgb(254, 147, 17), transparent 70%),
+        radial-gradient(circle at 50% 80%, rgba(255, 149, 100, 0.7), transparent 60%),
+        #ffefd1;
+    transition: background-color 0.3s ease;
+}
+
+.button-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    gap: 10px;
+
+}
+button{
+    height: 3em;
+    width: 2.3em;
+    display: flex;
+    border: none;
+    border-radius: 500px 500px 500px 500px;
+
+
+}
+.text{
+    margin: 10px;
+}
+
+.button-section button:first-child{
+    background-color: rgb(251, 100, 0);
+}
+.button-section button:nth-child(2){
+    background-color: rgb(58, 140, 255);
+}
+.button-section button:nth-child(3){
+    background-color: rgb(160, 246, 31);
+}
+
+.card-red {
+    background:
+        radial-gradient(circle at 30% 20%, rgba(255, 132, 132, 0.9), transparent 60%),
+        radial-gradient(circle at 70% 60%, rgba(237, 75, 21, 0.8), transparent 70%),
+        radial-gradient(circle at 50% 80%, rgba(235, 49, 49, 0.7), transparent 60%),
+        #ffd9d9;
+
+}
+
+.card-blue {
+    background:
+        radial-gradient(circle at 30% 20%, rgba(150, 220, 255, 0.9), transparent 60%),
+        radial-gradient(circle at 70% 60%, rgba(57, 50, 255, 0.8), transparent 70%),
+        radial-gradient(circle at 50% 80%, rgba(100, 188, 255, 0.7), transparent 60%),
+        #d9fcff;
+
+}
+
+.card-green {
+    background:
+        radial-gradient(circle at 30% 20%, rgba(234, 255, 150, 0.9), transparent 60%),
+        radial-gradient(circle at 70% 60%, rgba(132, 255, 50, 0.8), transparent 70%),
+        radial-gradient(circle at 50% 80%, rgba(100, 255, 165, 0.7), transparent 60%),
+        #d9fff4;
+
+}

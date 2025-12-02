@@ -1,0 +1,100 @@
+.card2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    border-radius: 10px;
+    margin: 10px;
+    height: 100%;
+    width: 25em;
+    height: 20em;
+    background-color: rgb(231, 240, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.text {
+    z-index: 2;
+}
+
+.paper {
+    position: static;
+    width: 7em;
+    height: 7em;
+
+}
+
+.paper img {
+    width: 7em;
+    height: 7em;
+    object-fit: contain;
+    z-index: 1;
+
+}
+
+.draggable-img {
+    position: absolute;
+    width: 100px;
+    cursor: pointer;
+}
+
+.clear-button{
+    cursor: pointer;
+}
+.clear-button.active{
+    transform: scale(1.04);
+}
+
+.draggable-img.active {
+   transform: scale(0.95);
+}
+
+
+.card3 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    border-radius: 10px;
+    margin: 10px;
+    height: 100%;
+    width: 41em;
+    height: 22em;
+
+    background-color: rgb(255, 247, 242);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+#myCanvas{
+    /* width:30em;
+    height:15em; */
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(0, 115, 209);
+    border-radius: 1em;
+}
+
+
+.card3-down{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+
+
+}
+.clear-button{
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+    width:5em;
+    height:18em;
+    border-radius: 1em;
+     border: 2px solid rgb(185, 185, 185);
+}
+.clear-button p {
+    font-size: 15px;
+}
