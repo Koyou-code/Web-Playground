@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Font Demo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="music-text">
+        <p>
+            Baby i am just trying to play it cool<br>
+            but i just can't hide that
+            i want you ♫⋆｡♪₊˚♬ ﾟ。
+        </p>
+
+    </div>
+    <div class="section">
+        <div class="card-1" id="card-1">
+            <img src="img/bg1.jpg" class="bg">
+            <img src="img/cd1.png" class="cd">
+            <audio id="audio-1" src="01.mp3"></audio>
+        </div>
+        <div class="card-2" id="card-2">
+            <img src="img/bg2.jpg" class="bg">
+            <img src="img/cd2.png" class="cd">
+            <audio id="audio-2" src="02.mp3"></audio>
+        </div>
+        <div class="card-3" id="card-3">
+            <img src="img/bg3.jpg" class="bg">
+            <img src="img/cd3.png" class="cd">
+            <audio id="audio-3" src="03.mp3"></audio>
+        </div>
+    </div>
+
+</body>
+<script>
+    const card1 = document.getElementById("card-1");
+    const card2 = document.getElementById("card-2");
+    const card3 = document.getElementById("card-3");
+
+    const audio1 = document.getElementById("audio-1");
+    const audio2 = document.getElementById("audio-2");
+    const audio3 = document.getElementById("audio-3");
+
+    // 封装绑定函数：鼠标移入播放，移出暂停
+    function bindHoverMusic(card, audio) {
+        card.addEventListener("mouseenter", () => {
+            playMusic(audio);
+        });
+        card.addEventListener("mouseleave", () => {
+            pauseMusic(audio);
+        });
+    }
+
+    bindHoverMusic(card1, audio1);
+    bindHoverMusic(card2, audio2);
+    bindHoverMusic(card3, audio3);
+
+    function playMusic(audio) {
+        if (audio.fadeInterval) clearInterval(audio.fadeInterval);
+
+        if (audio.paused) {
+            audio.volume = 0;
+            audio.play().catch(e => console.log("播放失败", e));
+        }
+
+        // 缓入：音量慢慢变大
+        audio.fadeInterval = setInterval(() => {
+            if (audio.volume < 0.95) {
+                audio.volume += 0.05;
+            } else {
+                audio.volume = 1;
+                clearInterval(audio.fadeInterval);
+            }
+        }, 50);
+    }
+
+    function pauseMusic(audio) {
+        if (audio.fadeInterval) clearInterval(audio.fadeInterval);
+
+        // 缓出：音量慢慢变小
+        audio.fadeInterval = setInterval(() => {
+            if (audio.volume > 0.05) {
+                audio.volume -= 0.05;
+            } else {
+                audio.volume = 0;
+                audio.pause();
+                clearInterval(audio.fadeInterval);
+            }
+        }, 50);
+    }
+
+</script>
+
+</html>
